@@ -11,6 +11,10 @@ resources:
     resources: 
   - name: Datasets
     resources: 
+      - name: Dataset1.csv
+        type: com.ibm.rational.test.lt.datapool
+      - name: Dataset1.csv.metadata
+        missing: true
   - name: 'JMeter Tests'
     resources: 
   - name: Locations
