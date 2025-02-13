@@ -13,8 +13,10 @@ resources:
     resources: 
       - name: Dataset1.csv
         type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /WebUIProject/Datasets/Dataset1.csv.metadata
+            type: datasetMetadata
       - name: Dataset1.csv.metadata
-        missing: true
   - name: 'JMeter Tests'
     resources: 
   - name: Locations

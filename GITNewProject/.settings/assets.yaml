@@ -1,0 +1,79 @@
+name: GITNewProject
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /GITNewProject/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+  - name: Datasets
+    resources: 
+  - name: 'JMeter Tests'
+    resources: 
+  - name: Locations
+    resources: 
+  - name: Results
+    resources: 
+      - name: GITNew_1739426593042.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1739426593042
+          tags: 
+          testId: A1EFE9D02DCA5980EA2EB43162323538
+          testName: GITNew
+        dependencies: 
+          - path: /GITNewProject/Results/GITNew_1739426593042.xmoebreport
+            type: statsSessionAsset
+          - path: /GITNewProject/Results/GITNew_1739426593042_orch!system.mstats
+            type: statsSessionStore
+          - path: /GITNewProject/Results/GITNew_1739426593042_orch!system.rstats
+            type: statsSessionStore
+          - path: /GITNewProject/Results/GITNew_1739426593042_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /GITNewProject/Results/GITNew_1739426593042_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /GITNewProject/Results/GITNew_1739426593280.executiondlr
+            type: statsSessionAsset
+          - path: /GITNewProject/Tests/GITNew.testsuite
+            type: statsSessionTest
+      - name: GITNew_1739426593042.xmoebreport
+      - name: GITNew_1739426593042_orch!system.mstats
+      - name: GITNew_1739426593042_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GITNew_1739426593042_perf!localhost.mstats
+      - name: GITNew_1739426593042_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GITNew_1739426593280.executiondlr
+  - name: Schedules
+    resources: 
+  - name: Tests
+    resources: 
+      - name: GITNew.recdata
+      - name: GITNew.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /GITNewProject/Tests/GITNew.recdata
+            type: recsessionRecdata
+      - name: GITNew.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.4.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EFE9D02DCA5980EA2EB43162323538
+        dependencies: 
+          - path: /GITNewProject/Tests/GITNew.recsession
+            type: testRecsession
+          - path: /GITNewProject/pectran_com_5e8.ma
+            type: test#moeb.applicationPackage
+  - name: pectran_com_5e8.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: GITNew_Test_A1EFE9D02DCA5980EA2EB43162323538.java
+            type: com.ibm.rational.test.lt.generatedCode
